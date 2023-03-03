@@ -1,0 +1,24 @@
+<script>
+  function loadInstaFeed() {
+    fetch('YOUR_URL_HERE').then(data => data.json()).then(photos => {
+      document.querySelectorAll('.insta-photo').forEach((p, ix) =>
+        p.insertAdjacentHTML('afterend',  `<img src="${photos[ix].mediaUrl}" class="${p.className}" id="${p.id}">`) || p.remove()) })}
+
+  loadInstaFeed()
+
+  {% if request.design_mode %}
+    window.addEventListener('shopify:section:load', loadInstaFeed)
+  {% endif %}
+</script>
+
+<style>
+  .insta-photo {
+    cursor: pointer;
+    transition: .2s ease;
+  }
+
+  .insta-photo:hover {
+    opacity: 0.8;
+    transition: .2s ease;
+  }
+</style>
