@@ -1,4 +1,4 @@
-# quick-and-dirty-instagram-feed
+# Quick and Dirty Instagram Feed
 Quick &amp; Dirty Instagram Feed for Shopify stores
 
 # Read about it
